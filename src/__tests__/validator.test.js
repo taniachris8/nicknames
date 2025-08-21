@@ -9,12 +9,12 @@ describe("Testing if validateUsername returns correct result", () => {
     });
 
     test("only Latin letters, dashes -, underscores _ and numbers (0-9) are allowed", () => {
-        expect(validator.validateUsername("crazy*_afanasy?")).toBeFalsy();
+        expect(validator.validateUsername("crazy*_afanasy")).toBeFalsy();
     });
 
     test(
         "userName can't contain more than 3 letters in a row", () => { 
-            expect(validator.validateUsername("afanasy5555")).toBeFalsy();
+            expect(validator.validateUsername("afana5555sy")).toBeFalsy();
         }
     );
 
