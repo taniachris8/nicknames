@@ -1,5 +1,13 @@
 export default class Validator {
-    constructor() {}
+   
+    validateUsername(userName) { 
+        const regex = /^[a-z](?:[a-z0-9_-])*[a-z]$/i;
 
-    validateUsername() { }
+        if (regex.test(userName) && !userName.match(/\d{4,}/)) {
+            return true;
+        } else { 
+            return false;
+        }
+        
+    }
 }
